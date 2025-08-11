@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root{
+  /* Brand Beige (lighter) */
+  --brand: #EADFCF;
+}
+
+html, body, #root { height: 100%; }
+body { margin: 0;background: #fff; color: #111; font-family: 'Noto Sans TC', sans-serif; }
+.active\:scale-98:active { transform: scale(0.98); }
