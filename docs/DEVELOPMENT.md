@@ -14,7 +14,7 @@
 - **ES7+ React/Redux/React-Native snippets**: React 程式碼片段
 - **Tailwind CSS IntelliSense**: Tailwind CSS 自動完成
 - **ESLint**: 程式碼品質檢查
-- **Prettier**: 程式碼格式化
+- **Prettier**（可選）: 程式碼格式化
 - **Auto Rename Tag**: 自動重命名標籤
 - **Bracket Pair Colorizer**: 括號配對著色
 
@@ -23,7 +23,7 @@
 ### 1. 克隆專案
 
 ```bash
-git clone [專案地址]
+git clone https://github.com/yourusername/lumi-gallery.git
 cd lumi-gallery
 ```
 
@@ -50,18 +50,17 @@ lumi-gallery/
 │   ├── pages/             # 頁面元件
 │   ├── layout/            # 佈局元件
 │   ├── assets/            # 靜態資源
-│   ├── hooks/             # 自訂 React Hooks
-│   ├── utils/             # 工具函數
-│   ├── styles/            # 樣式檔案
+│   ├── App.css            # 主應用樣式
 │   ├── App.jsx            # 主應用元件
+│   ├── index.css          # 全域樣式
 │   └── main.jsx           # 應用入口點
 ├── public/                 # 公共資源
 ├── docs/                   # 專案文件
-├── tests/                  # 測試檔案
-├── .eslintrc.js           # ESLint 配置
-├── tailwind.config.js     # Tailwind CSS 配置
+├── eslint.config.js        # ESLint 配置
+├── index.html              # HTML 模板
 ├── vite.config.js         # Vite 建構配置
-└── package.json           # 專案依賴和腳本
+├── package.json           # 專案依賴和腳本
+└── package-lock.json      # 版本鎖定
 ```
 
 ## 🧩 元件開發規範
@@ -107,7 +106,7 @@ export default ComponentName
 ### 樣式規範
 
 - 優先使用 Tailwind CSS 類別
-- 自訂樣式放在 `src/styles/` 目錄
+- 自訂樣式可放在 `src/` 下的 CSS 檔案中（例如 `App.css` 或 `index.css`）
 - 使用 CSS 變數定義主題色彩
 - 遵循 BEM 命名規範 (如果需要自訂 CSS)
 
@@ -190,7 +189,7 @@ git push origin feature/new-feature
 npm run lint
 
 # 自動修復問題
-npm run lint:fix
+npm run lint -- --fix
 ```
 
 ### 3. 建構測試
@@ -244,15 +243,7 @@ test('點擊按鈕觸發事件', () => {
 - 強制使用 === 比較
 
 ### Prettier 格式化
-
-```json
-{
-  "semi": true,
-  "singleQuote": true,
-  "tabWidth": 2,
-  "trailingComma": "es5"
-}
-```
+目前專案尚未整合 Prettier，如需自動格式化可自行安裝並於開發環境設定。
 
 ## 🚀 效能優化
 
