@@ -23,7 +23,7 @@ export default function Button({
   const cls = `${base} ${sizes[size]} ${variants[variant]} ${className}`;
   if (as === "a")
     return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+      <a href={href} rel="noopener noreferrer" className={cls}>
         {children}
       </a>
     );

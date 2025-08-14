@@ -111,13 +111,13 @@ export default function Lightbox({ open, onClose, image, onPrev, onNext }){
           className={`pointer-events-none absolute left-0 right-0 top-0 flex items-start justify-end p-3 sm:p-4 transition-opacity ${showUI ? 'opacity-100' : 'opacity-0'}`}
           style={{ paddingTop: 'calc(env(safe-area-inset-top) + 4px)' }}
         >
-          <button
+          {/* <button
             aria-label="close"
             onClick={(e) => { e.stopPropagation(); handleClose() }}
             className="hidden sm:inline-flex pointer-events-auto rounded-full bg-white/90 text-black shadow px-3 py-2"
           >
             ×
-          </button>
+          </button> */}
         </div>
 
         {/* caption 更靠近照片，且不阻擋點擊（pointer-events-none） */}

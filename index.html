@@ -1,13 +1,23 @@
 <!doctype html>
 <html lang="zh-Hant">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LumiGallery — 用鏡頭記錄真實與溫度</title>
-    <meta name="description" content="人像、街拍、活動紀錄攝影作品集與預約。" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LumiGallery — 用鏡頭記錄真實與溫度</title>
+  <meta name="description" content="人像、街拍、活動紀錄攝影作品集與預約。" />
+  <link rel="preload"
+  as="image"
+  href="/hero-photo/20250525-DSC02727-1200.webp"
+  imagesrcset="/hero-photo/20250525-DSC02727-800.webp 800w, /hero-photo/20250525-DSC02727-1200.webp 1200w"
+  imagesizes="100vw"
+  fetchpriority="high">
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
