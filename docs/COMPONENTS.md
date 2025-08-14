@@ -146,6 +146,35 @@ function MyPage() {
 <Container variant="narrow">內容</Container>
 ```
 
+### HeroPicture 首圖元件
+
+用於首頁或橫幅的主視覺圖片，支援 WebP 格式與多尺寸切換。
+
+#### 基本用法
+```jsx
+import HeroPicture from '../components/HeroPicture.jsx'
+
+const item = {
+  webp800: '/images/hero-800.webp',
+  webp1200: '/images/hero-1200.webp',
+  jpg1200: '/images/hero-1200.jpg',
+  w: 1200,
+  h: 800,
+  alt: '主視覺'
+}
+
+function Home() {
+  return <HeroPicture item={item} priority />
+}
+```
+
+#### 屬性說明
+| 屬性 | 類型 | 預設值 | 說明 |
+|------|------|--------|------|
+| `item` | `object` | - | 圖片來源與尺寸資訊 |
+| `priority` | `boolean` | `false` | 是否以高優先度載入 |
+| `className` | `string` | `''` | 額外的 Tailwind 樣式 |
+
 ### SectionTitle 章節標題元件
 
 用於頁面章節的標題顯示，支援主標題和副標題。
@@ -195,6 +224,33 @@ function MySection() {
 
 ## 🎨 互動元件
 
+### ImageCard 圖片卡片元件
+
+用於作品集的縮圖展示，支援鍵盤操作並可搭配 Lightbox 使用。
+
+#### 基本用法
+```jsx
+import ImageCard from '../components/ImageCard.jsx'
+
+function Portfolio() {
+  const onSelect = (item) => console.log(item)
+  const item = {
+    title: '作品標題',
+    webp800: '/images/p1-800.webp',
+    webp1200: '/images/p1-1200.webp',
+    jpg1200: '/images/p1-1200.jpg'
+  }
+  return <ImageCard item={item} onSelect={onSelect} />
+}
+```
+
+#### 屬性說明
+| 屬性 | 類型 | 預設值 | 說明 |
+|------|------|--------|------|
+| `item` | `object` | - | 圖片資料（含標題與多尺寸來源） |
+| `onSelect` | `function` | - | 點擊卡片時的回呼函式 |
+| `priority` | `boolean` | `false` | 是否優先載入圖片 |
+
 ### Lightbox 圖片燈箱元件
 
 用於圖片的放大查看和畫廊瀏覽。
@@ -241,6 +297,27 @@ function Gallery() {
 | `images` | `array` | `[]` | 圖片陣列 |
 | `currentIndex` | `number` | `0` | 當前顯示的圖片索引 |
 | `onImageChange` | `function` | - | 圖片切換的回調函數 |
+
+### DmExamplesCard 私訊範例卡片
+
+顯示常用的私訊範例並支援一鍵複製，適合放在聯絡頁面。此元件為示範性質，可視需求移除。
+
+#### 基本用法
+```jsx
+import DmExamplesCard from '../components/DmExamplesCard.jsx'
+
+function ContactExtras() {
+  return <DmExamplesCard igUrl="https://instagram.com/lumi_potraits" />
+}
+```
+
+#### 屬性說明
+| 屬性 | 類型 | 預設值 | 說明 |
+|------|------|--------|------|
+| `igUrl` | `string` | `'https://instagram.com/lumi_potraits'` | IG 連結 |
+| `title` | `string` | `'快速聯絡建議'` | 卡片標題 |
+| `description` | `string` | `'如想要得到盡快回覆，請直接私我 IG。'` | 描述文字 |
+| `examples` | `array` | - | 自訂私訊範例列表 |
 
 ### FloatingCTA 浮動行動按鈕
 

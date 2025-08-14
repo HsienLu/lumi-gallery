@@ -13,33 +13,27 @@ export default function ImageCard({ item, onSelect, priority = false }) {
         style={{ contentVisibility: 'auto' }}  // 視窗外先跳過繪製
       >
         <picture>
-          {/* 先給 AVIF（可先省略；要做就把 .webp 換 .avif） */}
-          {/* <source
-            type="image/avif"
-            srcSet={`${item.webp800.replace('.webp','.avif')} 800w, ${item.webp1200.replace('.webp','.avif')} 1200w`}
-            sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
-          /> */}
-          {/* WebP */}
-          <source
-            type="image/webp"
-            srcSet={`${item.webp800} 800w, ${item.webp1200} 1200w`}
-            sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
-          />
-          {/* 後備 JPG */}
-          <img
-            src={item.jpg1200 ?? item.src}
-            alt={title}
-            width={w}                // 這兩個一定要有，否則 CLS 會回來
-            height={h}
-            className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
-            loading={priority ? 'eager' : 'lazy'}
-            decoding="async"
-            fetchpriority={priority ? 'high' : 'auto'}
-            sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
-          />
-        </picture>
-        <figcaption className="p-3 text-sm text-black/70">{title}</figcaption>
-      </figure>
-    )
-  }
+            {/* WebP */}
+            <source
+              type="image/webp"
+              srcSet={`${item.webp800} 800w, ${item.webp1200} 1200w`}
+              sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+            />
+            {/* 後備 JPG */}
+            <img
+              src={item.jpg1200 ?? item.src}
+              alt={title}
+              width={w}                // 這兩個一定要有，否則 CLS 會回來
+              height={h}
+              className="aspect-[4/3] w-full object-cover transition group-hover:scale-105"
+              loading={priority ? 'eager' : 'lazy'}
+              decoding="async"
+              fetchpriority={priority ? 'high' : 'auto'}
+              sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+            />
+          </picture>
+          <figcaption className="p-3 text-sm text-black/70">{title}</figcaption>
+        </figure>
+      )
+    }
   
