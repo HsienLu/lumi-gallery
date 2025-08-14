@@ -178,11 +178,11 @@ export default function Home() {
               歡迎私訊洽談拍攝企劃與預算，提供人像、形象、活動紀錄等方案。
             </p>
           </div>
-          <div className="md:justify-self-end">
-            <Button as="a" href="#/contact" variant="solid" size="lg" className="w-full md:w-auto">
+          {/* <div className="md:justify-self-end">
+            <Button as="a" href="#/contact" variant="solid" size="lg" className="w-full md:w-auto border border-amber-50">
               立即預約
             </Button>
-          </div>
+          </div> */}
         </Container>
       </section>
     </main>
