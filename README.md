@@ -103,7 +103,7 @@ npm run lint
 
 - **色彩方案**: 以米色(#EADFCF)為主色調的品牌色彩
 - **字體**: Noto Sans TC 中文字體
-- **元件庫**: 可複用的UI元件
+- **元件庫**: 可複用的 UI 元件
 - **響應式設計**: 支援各種裝置尺寸
 
 詳細的設計規範請參考 [DESIGN_SYSTEM.md](./docs/DESIGN_SYSTEM.md)
@@ -131,9 +131,9 @@ npm run lint
 
 如有問題或建議，請透過以下方式聯絡：
 
-- 專案維護者: Lumi Gallery Team
-- 電子郵件: contact@lumigallery.example
-- 專案地址: https://github.com/yourusername/lumi-gallery
+- 專案維護者: hsienlu
+- 電子郵件: sjps946403@yahoo.com.tw
+- 專案地址: https://github.com/hsienlu/lumi-gallery
 
 ---
 
